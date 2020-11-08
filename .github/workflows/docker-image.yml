@@ -25,4 +25,4 @@ jobs:
           push: true
           tags: |
             ${{ github.repository}}:latest
-            ${{ github.repository}}:$(date +%s)
+            ${{ github.repository}}:${{github.base_ref}}
