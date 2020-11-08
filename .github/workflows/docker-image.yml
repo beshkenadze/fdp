@@ -20,6 +20,6 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ github.repository }}:latest
+        run: docker build . --file Dockerfile --tag ghcr.io/${{ github.repository }}:latest
       - name: Push the Docker image
-        run: docker push ${{ github.repository }}:latest
+        run: docker push ghcr.io/${{ github.repository }}:latest
