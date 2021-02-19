@@ -1,6 +1,6 @@
 # docker run -it node:lts-alpine /bin/bash
 # ---- Base Node ----
-FROM node:lts-alpine AS base
+FROM node:lts-alpine3.13 AS base
 # Preparing
 RUN mkdir -p /var/app && chown -R node /var/app
 # Set working directory
